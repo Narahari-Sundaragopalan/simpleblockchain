@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        command: python3 blockchain.py 0.0.0.0:5000
+        volumes:
+            - .:/code
+        ports:
+            - "80:5000"
